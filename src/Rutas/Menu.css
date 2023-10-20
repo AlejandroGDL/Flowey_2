@@ -1,0 +1,19 @@
+/* Contenedor Completo */
+.Contenedor_M{
+    display: grid;
+    grid-template:
+    "Sidebar_M Cuerpo_M" auto/
+    200px auto;
+
+    height: 100%;
+    width: 100%;
+}
+
+/* Atributos Cuerpo Menu */
+.Cuerpo_M{
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,103 @@
+/* Contenedor Footer Completo */
+.Container_Footer{
+    background-color: var(--Primary);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0px 15%;
+    width: 100%;
+}
+
+/* Subtitulo Footer */
+.Social_Media h6{
+    font-size: 32px;
+    color: var(--White);
+}
+
+/* Contenedor Media */
+.Social_Media > div{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+/* Atributos Imagen Social Media */
+.Social_Media > div img{
+    width: 60px;
+    height: 60px;
+}
+
+/* Atributos Texto Social Media */
+.Social_Media > div p{
+    font-size: 18px;
+    font-weight: 100;
+
+    color: var(--White);
+}
+
+/* Atributos Texto Social Media 2*/
+.Social_Media > div a{
+    font-size: 18px;
+    font-weight: 100;
+    color: var(--White);
+}
+
+/* Contendor Imagen Footer */
+.Footer_I{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+    
+    /* Contenedor Footer Completo */
+    .Container_Footer{
+        background-color: var(--Primary);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 0px 15%;
+        width: 100%;
+    }
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+
+    /* Contenedor Footer Completo */
+    .Container_Footer{
+        background-color: var(--Primary);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 15%;
+        width: 100%;
+    }
+
+    /* Subtitulo Footer */
+    .Social_Media h6{
+        font-size: 32px;
+        color: var(--White);
+        text-align: center;
+    }
+
+    /* Contenedor Media */
+    .Social_Media > div{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: left;
+
+    }
+}

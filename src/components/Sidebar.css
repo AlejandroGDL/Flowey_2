@@ -1,0 +1,77 @@
+
+/* Contenedor Sidebar */
+.Container_S{
+    border-right: var(--LightGray) 1px solid;
+    display: flex;
+    flex-direction: column;
+
+    margin: 5px;
+    justify-content: space-between;
+}
+
+/* Contenedor Imagen Sidebar */
+.Container_M_I{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Atributos Imagen Sidebar */
+.Container_S img{
+    width: 70px;
+    height: 45px;
+    margin: 10px;
+
+}
+
+/* Contenedor Botones Sidebar */
+.Op_M{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+
+    justify-content: start;
+    align-items: flex-start;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Atributos Botones Sidebar */
+.Op_M button{
+    display: flex;
+    justify-content: start;
+
+    color: var(--Black);
+    font-size: 14px;
+
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.Op_M li{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.Op_M a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenedor Avatar */
+.Contenedor_Avatar{
+    display: flex;
+    justify-content: center;
+    margin-top: 100%;
+}
+
+/* Atributos Botón Avatar */
+.Contenedor_Avatar button{
+    font-size: 14px;
+}
+

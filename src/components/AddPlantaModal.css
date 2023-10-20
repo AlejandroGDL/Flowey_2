@@ -1,0 +1,29 @@
+.Container_Modal{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Black);
+    border: var(--LightGray) 1px solid;
+    border-radius: 10px;
+}
+
+.Container_Modal form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    width: 100%
+}
+
+
+.Container_Modal Typography{
+    font-size: 20px;
+}
+
+.Container_Modal div{
+    display: flex;
+    justify-content: space-between;
+}

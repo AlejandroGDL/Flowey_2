@@ -1,0 +1,107 @@
+/* Contenedor Completo */
+
+/* Contenedor Imagenes Pasos */
+.Containter_Img_S{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+/* Contedor Pasos */
+.Containter_Img_S Div{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+/* Atributos Flechas Pasos */
+.Flecha_S{
+    width: 180px;
+    height: 5px;
+}
+
+/* Contenedor Instrucciones Pasos */
+.Instructions_S{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+/* Atributos Texto Pasos */
+.Instructions_S p{
+    text-align: center;
+    max-width: 200px;
+
+    font-size: 18px;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+    /* Contenedor Completo Pasos */
+    .Container_Step{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Contenedor Imagenes Pasos */
+    .Containter_Img_S{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Contenedor Instrucciones Pasos */
+    .Instructions_S{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    /* Atributos Flechas Pasos */
+    .Flecha_S{
+        opacity: 0;
+    }
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+
+    /* Contenedor Completo Pasos */
+    .Container_Step{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Contenedor Imagenes Pasos */
+    .Containter_Img_S{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    /* Contenedor Instrucciones Pasos */
+    .Instructions_S{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    /* Atributos Flechas Pasos */
+    .Flecha_S{
+        opacity: 0;
+    }
+}

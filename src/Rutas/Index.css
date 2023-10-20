@@ -1,0 +1,21 @@
+.Contenedor_I{
+    height: 100%;
+    grid-template: 
+    "Header_I" 60px,
+    "Cuerpo_I" auto,
+    "Product_I" auto,
+    "AboutUs_I" auto,
+    "Footer_I" auto;
+}
+
+.Cuerpo_I{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Margen_I{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

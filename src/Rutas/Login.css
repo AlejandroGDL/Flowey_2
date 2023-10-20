@@ -1,0 +1,213 @@
+  /*Eliminar decoración Vinculos*/
+  a{
+    text-decoration: inherit;
+    color: #000;
+  }
+
+  /* Contenedor Pagina Login */
+  .Contenedor_L{
+    height: 100%;
+    grid-template:
+    "Header_L" 60px,
+    "Body_Contenedor" auto;
+    padding: 30px;
+  }
+  
+  /* Atributos Vector */
+  .Body_Contenedor img{
+    width: 500px;
+    height: 500px;
+    
+    margin: 50px;
+  }
+
+  .Body_Contenedor{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 7px);
+  }
+
+  /* Atributos Divisor entre Imagen & Formulario */
+  .Divider{
+    width: 1px;
+    height: 600px;
+    background-color: var(--LightGray);
+  }
+  
+  
+  /* Atributos Contenedor Formulario */
+  .Form_Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px;
+  
+    background-color: var(--Gray);
+    border: var(--LightGray) 1px solid;
+    border-radius: 10px;
+    width: 480px;
+    height: 550px;
+  
+    gap: 50px;
+  }
+  
+  /* Subrayar Registrate Aquí */
+  .Form_Login a{
+    text-decoration: underline;
+  }
+  
+  /* Atributos Titúlo */
+  .Form_Login h2{
+    font-size: 36px;
+  }
+  
+  .Inputs > *{
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  /* Atributos Textbox */
+  #Text{
+    width: 400px;
+    height: 60px;
+  
+    border: var(--MiddleBlack) 1px solid;
+    border-radius: 10px;
+  }
+  
+  /* Atributos Botón */
+  #Button{
+    width: 280px;
+    height: 70px;
+  
+    border-radius: 50px;
+    font-size: 36px;
+    color: var(--White);
+    background-color: #000;
+  }
+  
+  #Button:hover{
+    cursor: pointer;
+  }
+
+
+  /*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+  /* Contenedor Pagina Login */
+  .Contenedor_L{
+    height: 100%;
+    grid-template:
+    "Header_L" 0px,
+    "Body_Contenedor" auto
+    0px auto;
+    padding: 30px;
+  }
+
+  .Body_Contenedor{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 7px);
+  }
+
+  
+  /* Atributos Textbox */
+  #Text{
+    width: 380px;
+    height: 60px;
+  
+    border: var(--MiddleBlack) 1px solid;
+    border-radius: 10px;
+  }
+  /* Atributos Vector */
+  .Body_Contenedor img{
+    width: 0.1px;
+    height: 0.1px;
+      
+    margin: 50px;
+    display: none;
+  }
+
+  /* Atributos Divisor entre Imagen & Formulario */
+  .Divider{
+    width: 0.1px;
+    height: 0.1px;
+    background-color: var(--LightGray);
+    display: none;
+  }
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+  
+  /* Contenedor Pagina Login */
+  .Contenedor_L{
+    height: 100%;
+    grid-template:
+    "Header_L" 0px,
+    "Body_Contenedor" auto
+    0px auto;
+    padding: 30px;
+  }
+
+  .Body_Contenedor{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 7px);
+  }
+
+  /* Atributos Contenedor Formulario */
+  .Form_Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px;
+  
+    background-color: var(--Gray);
+    border: var(--LightGray) 1px solid;
+    border-radius: 10px;
+    width: 440px;
+    height: 510px;
+  
+    gap: 50px;
+  }
+
+  /* Atributos Textbox */
+  #Text{
+    width: 380px;
+    height: 60px;
+  
+    border: var(--MiddleBlack) 1px solid;
+    border-radius: 10px;
+  }
+  /* Atributos Vector */
+  .Body_Contenedor img{
+    width: 0.1px;
+    height: 0.1px;
+      
+    margin: 50px;
+    display: none;
+  }
+
+  /* Atributos Divisor entre Imagen & Formulario */
+  .Divider{
+    width: 0.1px;
+    height: 0.1px;
+    background-color: var(--LightGray);
+    display: none;
+  }
+}

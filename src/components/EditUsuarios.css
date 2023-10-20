@@ -1,0 +1,113 @@
+.Container_EditU{
+    display: grid;
+    grid-template:
+    "EditU_Header" 100px
+    "EditU_Body" auto;
+
+    height: 100%;
+}
+
+/* Contenedor Titúlo CRUD */
+.EditU_Header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 5px;
+
+    background-color: var(--Primary);
+}
+
+/* Atributos Titúlo */
+.EditU_Header h1{
+    font-size: 48px;
+    color: var(--White);
+}
+
+/* Cuerpo Formulario Edit */
+.EditU_Body{
+    margin-top: 15px;
+}
+
+/* Formulario*/
+.EditU_Form{
+    background-color: var(--Gray);
+    border: var(--LightGray) 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Atributos Cuerpo Formulario */
+.EditU_Form_Body{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Atributos Encabezado Formulario */
+.EditU_Form_Header{
+    display: flex;
+    justify-content: center;
+}
+
+/* Atributos Pie Formulario */
+.EditU_Form_Footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Atributos Titulo */
+.EditU_Form_Header p{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--Black);
+}
+
+/* Atributos Textbox */
+.EditU_Txt{
+    width: 20%;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+    /* Atributos Cuerpo Formulario */
+    .EditU_Form_Body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .EditU_Txt{
+        width: 100%;
+    }
+
+    /* Atributos Titúlo */
+    .EditU_Header h1{
+        font-size: 42px;
+        color: var(--White);
+    }
+
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+
+    /* Atributos Cuerpo Formulario */
+    .EditU_Form_Body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .EditU_Txt{
+        width: 100%;
+    }
+
+    /* Atributos Titúlo */
+    .EditU_Header h1{
+        font-size: 22px;
+        color: var(--White);
+    }
+}

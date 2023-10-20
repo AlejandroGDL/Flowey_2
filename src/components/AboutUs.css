@@ -1,0 +1,215 @@
+/* Contenedor About Us Completo */
+.Container_AboutUs{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px 15%;
+    margin: 50px 0px;
+}
+
+/* About Us Primer Parte */
+.Header_AboutUs{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(70, 90, 82, 0.24) 0px 3px 8px;
+}
+
+/* Contenedor Texto */
+.Header_AboutUs div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: justify;
+
+    width: 50%;
+}
+
+/* Atributos Titulo Texto */
+.Header_AboutUs h4{
+    font-size: 32px;
+}
+
+/* Atributos Texto */
+.Header_AboutUs p{
+    width: auto;
+    font-size: 22px;
+}
+
+/* Contenedor Imagenes About Us */
+.Header_AboutUs div:nth-child(2){
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Atributos Imagenes About Us */
+.Header_AboutUs div:nth-child(2) > img{
+    margin: 0px 15px;
+}
+
+
+/* About Us Segunda Parte */
+.Footer_AboutUS{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedores Objetivos */
+.Footer_AboutUS > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    padding: 10px;
+    margin-top: 30px;
+    box-shadow: rgba(70, 90, 82, 0.16) 0px 1px 4px;
+
+    height: 590px;
+    width: 400px;
+}
+
+/* Atributos Titulo Objetivo */
+.Ob_AboutUS p:nth-child(1){
+    font-size: 32px;
+}
+
+/* Atributos Imagen Objetivo */
+.Ob_AboutUS img{
+    width: 230px;
+    height: 230px;
+}
+
+/* Atributos Descripcion Objetivo */
+.Ob_AboutUS p:nth-child(3){
+    padding: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Atributos Titulo Meta */
+.Me_AboutUS p:nth-child(1){
+    font-size: 32px;
+}
+
+/* Atributos Imagen Meta */
+.Me_AboutUS img{
+    width: 230px;
+    height: 230px;
+}
+
+/* Atributos Descripcion Meta */
+.Me_AboutUS p:nth-child(3){
+    padding: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+/* Atributos Titulo Innovación */
+.In_AboutUS p:nth-child(1){
+    font-size: 32px;
+}
+
+/* Atributos Imagen Innovación */
+.In_AboutUS img{
+    width: 230px;
+    height: 230px;
+}
+
+/* Atributos Descripcion Innovación */
+.In_AboutUS p:nth-child(3){
+    padding: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+    
+    .Footer_AboutUS{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* About Us Primer Parte */
+    .Header_AboutUs{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: rgba(70, 90, 82, 0.24) 0px 3px 8px;
+    }
+
+    /* Contenedor Texto */
+    .Header_AboutUs div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: justify;
+
+        width: 100%;
+    }
+
+    /* Contenedor Imagenes About Us */
+    .Header_AboutUs div:nth-child(2){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+}
+
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+    
+    .Footer_AboutUS{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* About Us Primer Parte */
+    .Header_AboutUs{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: rgba(70, 90, 82, 0.24) 0px 3px 8px;
+    }
+
+    /* Contenedor Texto */
+    .Header_AboutUs div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: justify;
+
+        width: 100%;
+    }
+
+    /* Contenedor Imagenes About Us */
+    .Header_AboutUs div:nth-child(2){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+}

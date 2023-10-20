@@ -1,0 +1,25 @@
+.Container_UsersM{
+    display: grid;
+    grid-template:
+    "UsersM_Header" 100px
+    "UsersM_Body" auto;
+
+    height: 100%;
+}
+
+/* Contenedor Titúlo CRUD */
+.UsersM_Header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 5px;
+
+    background-color: var(--Primary);
+}
+
+/* Atributos Titúlo */
+.UsersM_Header h1{
+    font-size: 48px;
+    color: var(--White);
+}

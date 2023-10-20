@@ -1,0 +1,260 @@
+.PlantaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+/* Contenedor planta */
+.Container_P{
+    background-color: transparent;
+    border: var(--Gray) 2px solid;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template: 
+    "Container_I Container_Estado Cuerpo_I" /
+    200px 50px auto;
+    padding: 10px;
+
+    margin: 30px;
+    width: auto;
+}
+
+/* Contenedor Imagen planta */
+.Container_I{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 0px 0px 10px;
+    background-color: var(--BGPlanta);
+}
+
+/* Atributos imagen */
+.Container_I img{
+    width: 150px;
+    height: 240px;
+    margin: 5px;
+}
+
+/* Contenedor Imagen Estado */
+.Container_Estado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        var(--BGPlanta) 0%,
+        var(--BGPlanta) 50%,
+        white 50%,
+        white 100%
+    );
+}
+
+/* Contenedor cuerpo Sensores */
+.Cuerpo_I{
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+}
+
+/* Atributos Titulo Planta */
+.Cuerpo_I h5{
+    font-size: 36px;
+}
+
+/* Contenedor Sensores */
+.Sensores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 80%;
+}
+
+/* Contenedor Imagen Sensores */
+.Sensor_I{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor sensores (Separado) */
+.Sensores > Div{
+ background-color: var(--LightGray);
+ margin: 5px;
+ border-radius: 10px;
+ height: 80px;
+ padding: 5px;
+ width: auto;
+
+ display: grid;
+ grid-template: 
+ "Sensor_I Sensor_Cuerpo" /
+ 60px auto;
+}
+
+/* Contenedor cuerpo(Texto) sensor */
+.Sensor_Cuerpo{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width:auto;
+}
+
+/* Descripción sensor */
+.Sensor_Cuerpo > p:nth-child(1){
+    font-size: 16px;
+
+    width: 230px;
+}
+
+/* Datos sensor */
+.Sensor_Cuerpo > p:nth-child(2){
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: 500;
+
+    width: 230px;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+    /* Contenedor planta */
+    .Container_P{
+        background-color: transparent;
+        border: var(--Gray) 2px solid;
+        border-radius: 10px;
+
+        display: grid;
+
+        grid-template:
+        "Container_I" 250px
+        "Container_Estado" 0px
+        "Cuerpo_I" 300px ;
+
+        padding: 10px;
+
+        margin: 30px;
+        width: auto;
+    }
+    
+    /* Contenedor Sensores */
+    .Sensores{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+        height: 80%;
+    }
+
+    /* Contenedor Imagen planta */
+    .Container_I{
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: var(--BGPlanta);
+    }
+    
+    /* Atributos imagen */
+    .Container_I img{
+        width: 130px;
+        height: 210px;
+        margin: 5px;
+    }
+
+    /* Contenedor Imagen Estado */
+    .Container_Estado{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+            to top,
+            white 0%,
+            white 50%,
+            var(--BGPlanta) 50%,
+            var(--BGPlanta) 100%
+        );
+    }
+
+    /* Atributos Titulo Planta */
+    .Cuerpo_I h5{
+        margin-top: 10px;
+        font-size: 36px;
+    }
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+    
+    /* Contenedor planta */
+    .Container_P{
+        background-color: transparent;
+        border: var(--Gray) 2px solid;
+        border-radius: 10px;
+
+        display: grid;
+
+        grid-template:
+        "Container_I" 250px
+        "Container_Estado" 0px
+        "Cuerpo_I" 300px ;
+
+        padding: 10px;
+
+        margin: 30px;
+        width: auto;
+        height: auto;
+    }
+    
+    /* Contenedor Sensores */
+    .Sensores{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:center;
+        height: 80%;
+    }
+
+    /* Contenedor Imagen planta */
+    .Container_I{
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: var(--BGPlanta);
+    }
+    
+    /* Atributos imagen */
+    .Container_I img{
+        width: 130px;
+        height: 210px;
+        margin: 5px;
+    }
+
+    /* Contenedor Imagen Estado */
+    .Container_Estado{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+            to top,
+            white 0%,
+            white 50%,
+            var(--BGPlanta) 50%,
+            var(--BGPlanta) 100%
+        );
+    }
+
+    /* Atributos Titulo Planta */
+    .Cuerpo_I h5{
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+}
