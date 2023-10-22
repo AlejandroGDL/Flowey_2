@@ -40,14 +40,4 @@ Route::controller(PlantasController::class)->group(function(){
     Route::delete('/Plantas/{id}', 'destroy');
 });
 
-Route::post('/Login',function(){
-    $credentials = request()->only('Email','Password');
-
-    if(Auth::attempt($credentials)){
-        request()->session()->regenerate();
-        return ('Correcto');
-    }
-    return ('Incorrecto');
-});
-
 Route::get('/Login2',[App\Http\Controllers\Api\AuthController::class,'Login']);

@@ -3,28 +3,34 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Laravel\Passport\HasApiTokens;
+use Laravel\Sanctum\NewAccessToken;
+
 
 class AuthController extends Controller
 {
 
-    public function Login(Request $request){
-        // if (!Auth::attempt($request->only('Email','Password'))){
-        //     return response([
-        //         'message' => 'Credenciales Invalidas'
-        //     ]);
-        // }
+    public function login(LoginRequest $request){
+        
 
-        // $User = Auth::user();
+        $data = $request->validated();
 
-        // $Token = $User->createToken('token')->planTextToken;
-        // $Cookie = cookie('jwt',$Token,60*24);
+        if (!Auth::attempt($data)){
+            return response([
+                'message' => ['Credenciales Invalidas']
+            ],422);
+        }
+        
 
-        // return response([
-        //     'message' => 'Login Correcto'
-        // ])->withCookie($Cookie);
+        $user = Auth::user();
+        return [
+            'token' => $user->createToken('token')->plainTextToken,
+            'user' => $user
+        ];
     }
 
     

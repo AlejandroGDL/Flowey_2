@@ -60,7 +60,6 @@ function Plant_M(){
                                 <TableCell align="left">Descripción</TableCell>
                                 <TableCell align="left">Tipo de planta</TableCell>
                                 <TableCell align="center">Humedad en Tierra</TableCell>
-                                <TableCell align="center">Hora de Regar</TableCell>
                                 <TableCell align="center">Humedad Ambiente</TableCell>
                                 <TableCell align="center">Temperatura Ambiente</TableCell>
                                 <TableCell align="left">Acciones</TableCell>
@@ -73,7 +72,6 @@ function Plant_M(){
                                     <td align="left">{Planta.Plant_Desc}</td>
                                     <td align="left">{Planta.Plant_Type}</td>
                                     <td align="center">{Planta.Earth_Humidity}</td>
-                                    <td align="center">{Planta.Water_Time}</td>
                                     <td align="center">{Planta.Ambient_Humidity}</td>
                                     <td align="center">{Planta.Room_Temperature}</td>
                                     <td>

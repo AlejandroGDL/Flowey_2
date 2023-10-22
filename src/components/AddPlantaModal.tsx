@@ -44,7 +44,6 @@ export default function AddPlanta() {
   const [PlantDesc, setPlantDesc] = useState('');
   const [PlantType, setPlantType] = useState('');
   var EarthHum=0;
-  var WaterTime=0;
   var AmbHum=0;
   var RoomTemp=0;
 
@@ -52,7 +51,7 @@ export default function AddPlanta() {
 
   const store = async (e:any) => {
     e.preventDefault();
-    await axios.post(endpoint, {Plant_Name: PlantName,Plant_Desc: PlantDesc,Plant_Type: PlantType,Earth_Humidity: EarthHum,Water_Time: WaterTime,Ambient_Humidity: AmbHum,Room_Temperature: RoomTemp});
+    await axios.post(endpoint, {Plant_Name: PlantName,Plant_Desc: PlantDesc,Plant_Type: PlantType,Earth_Humidity: EarthHum,Ambient_Humidity: AmbHum,Room_Temperature: RoomTemp});
     navigate('/Menu/Plantas');
   }
 

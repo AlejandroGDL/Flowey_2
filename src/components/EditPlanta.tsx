@@ -16,7 +16,6 @@ const Hola = () => {
   const [PlantDesc, setPlantDesc] = useState('');
   const [PlantType, setPlantType] = useState('');
   var EarthHum=0;
-  var WaterTime=0;
   var AmbHum=0;
   var RoomTemp=0;
   const {id} = useParams();
@@ -29,7 +28,6 @@ const Hola = () => {
       Plant_Desc: PlantDesc,
       Plant_Type: PlantType,
       Earth_Humidity: EarthHum,
-      Water_Time:WaterTime,
       Ambient_Humidity: AmbHum,
       Room_Temperature: RoomTemp
     })

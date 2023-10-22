@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('Plant_Desc');
             $table->string('Plant_Type');
             $table->float('Earth_Humidity');
-            $table->float('Water_Time');
             $table->float('Ambient_Humidity');
             $table->float('Room_Temperature');
             $table->timestamps();

@@ -27,7 +27,6 @@ class PlantasController extends Controller
         $Planta->Plant_Desc = $request->Plant_Desc;
         $Planta->Plant_Type = $request->Plant_Type;
         $Planta->Earth_Humidity = $request->Earth_Humidity;
-        $Planta->Water_Time = $request->Water_Time;
         $Planta->Ambient_Humidity = $request->Ambient_Humidity;
         $Planta->Room_Temperature = $request->Room_Temperature;
 
@@ -53,7 +52,6 @@ class PlantasController extends Controller
         $Planta->Plant_Desc = $request->Plant_Desc;
         $Planta->Plant_Type = $request->Plant_Type;
         $Planta->Earth_Humidity = $request->Earth_Humidity;
-        $Planta->Water_Time = $request->Water_Time;
         $Planta->Ambient_Humidity = $request->Ambient_Humidity;
         $Planta->Room_Temperature = $request->Room_Temperature;
 

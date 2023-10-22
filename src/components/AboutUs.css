@@ -10,7 +10,7 @@
 /* About Us Primer Parte */
 .Header_AboutUs{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 15px;
     border-radius: 15px;
     box-shadow: rgba(70, 90, 82, 0.24) 0px 3px 8px;
@@ -24,7 +24,7 @@
 
     text-align: justify;
 
-    width: 50%;
+    width: auto;
 }
 
 /* Atributos Titulo Texto */
@@ -40,10 +40,12 @@
 
 /* Contenedor Imagenes About Us */
 .Header_AboutUs div:nth-child(2){
-    width: 50%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 50px 0px;
 }
 
 /* Atributos Imagenes About Us */
@@ -131,6 +133,16 @@
     text-align: justify;
 }
 
+/* Atributos Fotografias AboutUs  */
+#Photo{
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    border: 2px var(--Black) solid;
+}
+
 
 /*===== Modo Tablet =====*/
 @media (min-width:768px) and (max-width:1023px){
@@ -166,11 +178,23 @@
     .Header_AboutUs div:nth-child(2){
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 15px;
     }
 
+    /* Atributos Imagenes About Us */
+    .Header_AboutUs div:nth-child(2) > img{
+        margin: 0px 5px;
+    }
+
+    /* Atributos Fotografias AboutUs  */
+    #Photo{
+        width: 80px;
+        height: 80px;
+        margin-top: 15px;
+    }
 }
 
 
@@ -208,8 +232,22 @@
     .Header_AboutUs div:nth-child(2){
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 15px;
+
+    }
+
+    /* Atributos Imagenes About Us */
+    .Header_AboutUs div:nth-child(2) > img{
+        margin: 0px 5px;
+    }
+
+    /* Atributos Fotografias AboutUs  */
+    #Photo{
+        width: 130px;
+        height: 130px;
         margin-top: 15px;
     }
 }

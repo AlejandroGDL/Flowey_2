@@ -10,11 +10,11 @@ function AboutUs(){
                     <p>Creemos en la tecnología para realizar una tarea como sería realizar el cuidado de nuestras plantas. Nos esforzamos por hacer que sea de fácil uso apoyándonos con la tecnología Open Source. Trabajamos con compañeros de otras carreras para realizar nuestra meta.</p>
                 </div>
                 <div>
-                    <img src="" alt="Nosotros 1" />
-                    <img src="" alt="Nosotros 2" />
-                    <img src="" alt="Nosotros 3" />
-                    <img src="" alt="Nosotros 4" />
-                    <img src="" alt="Nosotros 5" />
+                    <img src="../public/Photos/OurPhoto2.jpg" alt="Nosotros 1"  id="Photo"/>
+                    <img src="../public/Photos/OurPhoto3.jpg" alt="Nosotros 2" id="Photo"/>
+                    <img src="../public/Photos/OurPhoto4.jpg" alt="Nosotros 3" id="Photo"/>
+                    <img src="../public/Photos/OurPhoto5.jpg" alt="Nosotros 4" id="Photo"/>
+                    <img src="../public/Photos/OurPhoto1.jpg" alt="Nosotros 5" id="Photo"/>
                 </div>
             </div>
             <div className="Footer_AboutUS">
