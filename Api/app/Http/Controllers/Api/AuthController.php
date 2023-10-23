@@ -14,24 +14,30 @@ use Laravel\Sanctum\NewAccessToken;
 class AuthController extends Controller
 {
 
-    public function login(LoginRequest $request){
+    public function login(Request $request){
+        $request->validate([
+            'Email' => 'required|email',
+            'Password' => 'required'
+        ]);
         
-
-        $data = $request->validated();
-
-        if (!Auth::attempt($data)){
+        $user = User::where('Email', $request->email)->first();
+        
+        if(!$user || !Auth::attempt($request->only('Email','Password'))){
             return response([
                 'message' => ['Credenciales Invalidas']
             ],422);
         }
         
-
-        $user = Auth::user();
         return [
-            'token' => $user->createToken('token')->plainTextToken,
-            'user' => $user
+            'token' => $user->createToken($request->device_name)->plainTextToken,
         ];
     }
 
-    
+
+    public function logout(Request $request){
+        $request->user()->currentAccessToken()->delete();
+        return response([
+            'message' => ['Sesion Cerrada']
+        ]);
+    }
 }
