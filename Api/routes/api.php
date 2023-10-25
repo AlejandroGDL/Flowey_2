@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\UsuariosController;
 use App\Http\Controllers\Api\PlantasController;
+use App\Http\Controllers\Api\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,8 +29,6 @@ Route::controller(UsuariosController::class)->group(function(){
     Route::get('/Inicio/{id}', 'show');
     Route::put('/Usuarios/{id}', 'update');
     Route::delete('/Inicio/{id}', 'destroy');
-
-    
 });
 
 Route::controller(PlantasController::class)->group(function(){
@@ -40,4 +39,4 @@ Route::controller(PlantasController::class)->group(function(){
     Route::delete('/Plantas/{id}', 'destroy');
 });
 
-Route::get('/Login2',[App\Http\Controllers\Api\AuthController::class,'Login']);
+Route::post('/Login',[AuthController::class,'Login']);
