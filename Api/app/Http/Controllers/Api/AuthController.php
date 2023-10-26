@@ -30,24 +30,42 @@ class AuthController extends Controller
     //         'token' => $user->createToken($request->device_name)->plainTextToken,
     //     ];
     // }
-    
 
-    public function login(LoginRequest $request)
-    {
+
+    public function login(LoginRequest $request){
         $credentials = $request->only('Email', 'Password');
 
-        if (Auth::attempt($credentials)) {
-            $user = User::where('Email', $request->Email)->first();
-            $token = $user->createToken('authToken')->accessToken;
+        $user = User::where('Email', $request->Email)->first();
 
-            return response()->json([
-                'user' => $user,
-                'access_token' => $token
-            ]);
+        if(!Auth::attempt($credentials)){
+            return response([
+                'message' => ['Credenciales Invalidas']
+            ],422);
         }
 
-        return response()->json(['error' => 'Unauthorized'], 401);
+        return [
+            'token' => $user->createToken($request->device_name)->plainTextToken,
+            'user' => $user
+        ];
     }
+    
+
+    // public function login(LoginRequest $request)
+    // {
+    //     $credentials = $request->only('Email', 'Password');
+
+    //     if (Auth::attempt($credentials)) {
+    //         $user = User::where('Email', $request->Email)->first();
+    //         $token = $user->createToken('authToken')->accessToken;
+
+    //         return response()->json([
+    //             'user' => $user,
+    //             'access_token' => $token
+    //         ]);
+    //     }
+
+    //     return response()->json(['error' => 'Unauthorized'], 401);
+    // }
 
     
 
@@ -78,11 +96,4 @@ class AuthController extends Controller
     //     }
 
     //     return response()->json(['error' => 'Unauthorized'], 401);
-    // }
-
-    // public function logout(Request $request){
-    //     $request->user()->currentAccessToken()->delete();
-    //     return response([
-    //         'message' => ['Sesion Cerrada']
-    //     ]);
     // }

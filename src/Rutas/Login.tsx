@@ -33,7 +33,7 @@ function Login(){
 
         const datos = {
             Email: emailRef.current.value,
-            Password: passwordRef.current.value,
+            Password: passwordRef.current.value
         }
 
         try {
