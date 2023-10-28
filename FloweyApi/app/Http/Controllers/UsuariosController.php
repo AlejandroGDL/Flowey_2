@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
-use Laravel\Sanctum\HasApiTokens;
 
 class UsuariosController extends Controller
 {
-    use HasApiTokens;
     /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -21,6 +20,9 @@ class UsuariosController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -36,8 +38,11 @@ class UsuariosController extends Controller
 
     /**
      * Display the specified resource.
+     *
+     * @param  \App\Models\Usuarios  $usuarios
+     * @return \Illuminate\Http\Response
      */
-    public function show(string $id)
+    public function show(Usuarios $id)
     {
         $Usuario = Usuarios::find($id);
         return $Usuario;
@@ -45,10 +50,12 @@ class UsuariosController extends Controller
 
     /**
      * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Usuarios  $usuarios
+     * @return \Illuminate\Http\Response
      */
-
-
-    public function update(Request $request, string $id)
+    public function update(Request $request, Usuarios $usuarios)
     {
         $Usuario = Usuarios::findOrFail($request->id);
         $Usuario->User_Name = $request->User_Name;
@@ -63,8 +70,11 @@ class UsuariosController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Usuarios  $usuarios
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(string $id)
+    public function destroy(Usuarios $id)
     {
         $Usuario = Usuarios::destroy($id);
         return $Usuario;

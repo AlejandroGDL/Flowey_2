@@ -3,16 +3,15 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Testing\Fluent\Concerns\Has;
-use Laravel\Sanctum\HasApiTokens;
 
 return new class extends Migration
 {
-    use HasApiTokens;
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
@@ -27,8 +26,10 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('usuarios');
     }

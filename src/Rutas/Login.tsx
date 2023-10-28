@@ -57,9 +57,9 @@ function Login(){
                         <h2>¡Bienvenido!</h2>
                         <div className="Inputs">
                             <p>Correo Electronico:</p>
-                            <input value={Correo} onChange={(e)=>setCorreo(e.target.value)} type="email" name="" id="Text" ref={emailRef}/>
+                            <input value={Correo} onChange={(e)=>setCorreo(e.target.value)} type="email" name="" id="Text" ref={emailRef} required autoComplete="username" />
                             <p>Contraseña:</p>
-                            <input value={Contraseña} onChange={(e)=>setContraseña(e.target.value)} type="password" name="" id="Text" ref={passwordRef}/>
+                            <input value={Contraseña} onChange={(e)=>setContraseña(e.target.value)} type="password" name="" id="Text" ref={passwordRef} required autoComplete="current-password"/>
                         </div>
                         <input type="submit" value="Iniciar sesión" id="Button" />
                         <p>¿No tienes cuenta? <Link to={"/Register"}><span>Registrate</span></Link></p>
