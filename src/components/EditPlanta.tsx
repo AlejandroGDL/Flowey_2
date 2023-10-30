@@ -8,9 +8,6 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import clienteAxios from '../config/axios';
 
-const endpoint = 'http://localhost:8000/api/Plantas/'
-
-
 const Hola = () => {
   // Variables Registro Planta
   const [PlantName, setPlantName] = useState('');

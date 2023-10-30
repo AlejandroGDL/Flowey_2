@@ -1,9 +1,23 @@
 import clienteAxios from '../config/axios'
 import { useNavigate } from 'react-router-dom'
+import useSWR from 'swr'
 
 export const useAuth = ({middleware, url}: {middleware: any, url: string}) => {
 
     var Navegacion = useNavigate();
+    // const token = localStorage.getItem('AUTH TOKEN')
+
+    // const {data: user, error} = useSWR('/api/Login', () => 
+    //     clienteAxios('/api/Login',{
+    //         headers: {
+    //             Authorization: `Bearer ${token}`
+    //         }
+    //     })
+    //     .then(res => res.data)
+    //     .catch(error => {
+    //         throw Error(error?.response?.data?.errors)
+    //     })
+    // )
 
     const register = async(Nombre:any,Apellidos:any,Correo:any,Contraseña:any) => {
         const N1 = 'User';
@@ -34,6 +48,9 @@ export const useAuth = ({middleware, url}: {middleware: any, url: string}) => {
     const logout = () => {
         
     }
+
+    // console.log(user)
+    // console.log(error)
 
 
     return {

@@ -1,12 +1,10 @@
 import '../Rutas/Menu.css'
-import {  BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
+import { Route, Routes} from 'react-router-dom';
 import Inicio_M from '../Rutas/Inicio_M'
 import Plant_M from '../Rutas/Crud_Planta';
 import ShowU from './CrudUsuarios';
 import EditPlanta from '../components/EditPlanta'
 import EditUsuario from '../components/EditUsuarios'
-
 import Sidebar from '../components/Sidebar';
 
 
