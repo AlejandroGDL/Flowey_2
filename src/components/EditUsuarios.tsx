@@ -17,7 +17,6 @@ function EditUsuario (){
   const [Apellidos, setApellidos] = useState('');
   const [Correo, setCorreo] = useState('');
   const [Contraseña, setContraseña] = useState('');
-//   const [Permisos, setPermisos] = useState('');
   var Permiso='User';
 
   const {id} = useParams();
@@ -64,7 +63,6 @@ function EditUsuario (){
                         <TextField value={Apellidos} onChange={(e)=>setApellidos(e.target.value)} className='EditU_Txt' id="filled-basic" label="Apellidos" variant="filled" margin="dense"/>
                         <TextField value={Correo} onChange={(e)=>setCorreo(e.target.value)} className='EditU_Txt' id="filled-basic" label="Correo" variant="filled" margin="dense"/>
                         <TextField value={Contraseña} onChange={(e)=>setContraseña(e.target.value)} className='EditU_Txt' id="filled-basic" label="Contaseña" variant="filled" margin="dense"/>
-                        {/* <TextField value={Permisos} onChange={(e)=>setPermisos(e.target.value)} className='HelpTxt' id="filled-basic" label="Permisos" variant="filled" margin="dense"/> */}
                     </div>
                     <div className='EditU_Form_Footer'>
                         <Link to={'/Menu/Usuarios'}><Button variant='text'>Descartar</Button></Link>

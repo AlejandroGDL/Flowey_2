@@ -1,7 +1,5 @@
 import "../Rutas/CrudUsuarios.css"
-import Button from "@mui/material/Button/Button";
-import axios from "axios";
-import React,{useEffect,useState} from "react";
+import {useEffect,useState} from "react";
 
 import { Link } from "react-router-dom";
 import { styled } from '@mui/material/styles';
@@ -15,9 +13,9 @@ import Paper from '@mui/material/Paper';
 import { IconButton } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import clienteAxios from "../config/axios";
 
 
-const endpoint = 'http://localhost:8000/api'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -50,13 +48,13 @@ function ShowUsers(){
 
     //Metodo Buscar Usuario
     const getAllUsuarios = async () => {
-        const response = await axios.get(`${endpoint}/Inicio`)
+        const response = await clienteAxios.get('/api/Inicio')
         setUsuarios(response.data as any)
     }
 
     //Metodo Eliminar Usuario
     const DeleteUsuarios = async(id:any) =>{
-        await axios.delete(`${endpoint}/Inicio/${id}`)
+        await clienteAxios.delete(`/api/Inicio/${id}`)
         getAllUsuarios()
     }
 

@@ -4,36 +4,25 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import '../Rutas/Register.css'
 import TextField from '@mui/material/TextField';
 import CookieIcon from '@mui/icons-material/Cookie';
-import axios from 'axios';
-import React,{useState} from 'react';
-import Alert from '@mui/material/Alert';
-import { useNavigate } from 'react-router-dom';
-
-
-const endpoint = 'http://localhost:8000/api/InicioS'
-
-// axios.defaults.baseURL = 'http://localhost:8000/api';
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, Content-Type, X-Auth-Token';
+import {useState} from 'react';
+import useAuth from '../Hook/UseAuth';
 
 function Register(){
     const [Nombre, setNombre] = useState('');
     const [Apellidos, setApellidos] = useState('');
     const [Correo, setCorreo] = useState('');
     const [Contraseña, setContraseña] = useState('');
-    var N1='User';
 
-    var Navegacion = useNavigate();
+    // Funcion Registro de Usuario
+    const {register} = useAuth({
+        middleware: 'guest',
+        url: '/Login',
+    });
 
+    //Utiliza la funcion register de useAuth
     const store = async (e:any) => {
         e.preventDefault();
-        await axios.post(endpoint,{
-            User_Name: Nombre,
-            User_LastName: Apellidos,
-            Email: Correo,
-            Password: Contraseña,
-            Permissions: N1 })
-        Navegacion('/Login')
+        register(Nombre, Apellidos, Correo, Contraseña)
     }
 
     return(

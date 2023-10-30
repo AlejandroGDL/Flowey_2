@@ -1,25 +1,13 @@
 import * as React from 'react';
-
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
-
-import {useState} from 'react';
-import axios from 'axios';
-
+import {useState,useEffect} from 'react';
 import "../components/AddPlantaModal.css"
 import { useNavigate } from 'react-router-dom';
-
-
-const endpoint = 'http://localhost:8000/api/Planta'
-
-
-// axios.defaults.baseURL = 'http://localhost:8000/api/Planta';
-// axios.defaults.withCredentials = true;
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, Content-Type, X-Auth-Token';
+import clienteAxios from '../config/axios';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -51,8 +39,8 @@ export default function AddPlanta() {
 
   const store = async (e:any) => {
     e.preventDefault();
-    await axios.post(endpoint, {Plant_Name: PlantName,Plant_Desc: PlantDesc,Plant_Type: PlantType,Earth_Humidity: EarthHum,Ambient_Humidity: AmbHum,Room_Temperature: RoomTemp});
-    navigate('/Menu/Plantas');
+    await clienteAxios.post('/api/Planta', {Plant_Name: PlantName,Plant_Desc: PlantDesc,Plant_Type: PlantType,Earth_Humidity: EarthHum,Ambient_Humidity: AmbHum,Room_Temperature: RoomTemp});
+    navigate('/Menu/Inicio');
   }
 
   return (

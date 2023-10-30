@@ -1,9 +1,7 @@
 import "./Plant.css"
-
 import {useEffect,useState} from "react";
 import axios from "axios";
-
-const endpoint = 'http://localhost:8000/api'
+import clienteAxios from "../config/axios";
 
 
 function Plant(){
@@ -14,9 +12,9 @@ function Plant(){
         getAllPlantas();
     },[])
 
-    //Metodo Buscar Usuario
+    //Metodo Buscar Planta
     const getAllPlantas = async () => {
-        const response = await axios.get(`${endpoint}/Plantas`)
+        const response = await clienteAxios.get('/api/Plantas')
         setPlantas(response.data as any)
     }
 

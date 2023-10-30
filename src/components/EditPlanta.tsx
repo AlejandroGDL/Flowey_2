@@ -6,6 +6,7 @@ import axios from 'axios';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import clienteAxios from '../config/axios';
 
 const endpoint = 'http://localhost:8000/api/Plantas/'
 
@@ -23,7 +24,7 @@ const Hola = () => {
 
   const update = async (e:any) =>{
     e.preventDefault();
-    await axios.put(`${endpoint}${id}`,{
+    await clienteAxios.put(`/api/Plantas/${id}`,{
       Plant_Name: PlantName,
       Plant_Desc: PlantDesc,
       Plant_Type: PlantType,
@@ -36,7 +37,7 @@ const Hola = () => {
 
   React.useEffect( ()=>{
     const getProductByID = async () => {
-       const respuesta = await axios.get(`${endpoint}${id}`)
+       const respuesta = await clienteAxios.get(`/api/Plantas/${id}`)
        setPlantName(respuesta.data.Plant_Name)
        setPlantDesc(respuesta.data.Plant_Desc)
        setPlantType(respuesta.data.Plant_Type)

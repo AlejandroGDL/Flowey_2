@@ -15,7 +15,7 @@ function App() {
     <Router>
       {/* Rutas navegacion React Router DOM */}
       <Routes>
-        <Route path="/" element={<Index />}/>
+        <Route path="/" element={<Index />} />
         <Route path="Login" element={<Login />}/>
         <Route path="Register" element={<Register />}/>
         <Route path=':id' element={<EditPlanta />}/>

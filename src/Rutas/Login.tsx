@@ -3,30 +3,20 @@ import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import {useState, createRef} from 'react';
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const endpoint = 'http://localhost:8000/api/Login'
-
+import useAuth from '../Hook/UseAuth';
 
 function Login(){
     const [Correo, setCorreo] = useState('');
     const [Contraseña, setContraseña] = useState('');
-    const Navegacion = useNavigate();
-
-    const Credenciales = async(e:any)=>{
-        e.preventDefault();
-        try{
-            const {data} = await axios.post(endpoint,{Correo,Contraseña})
-            localStorage.setItem('AUTH TOKEN', data.token)
-            Navegacion('/Menu/Inicio');
-        }catch(e){
-            console.log(e);
-        }
-    }
 
     const emailRef:any = createRef();
     const passwordRef:any = createRef();
+    const {login} = useAuth({
+        middleware: 'guest',
+        url: '/Menu/Inicio',
+    });
 
     const handleSubmit = async(e:any) => {
         e.preventDefault();
@@ -35,13 +25,7 @@ function Login(){
             Email: emailRef.current.value,
             Password: passwordRef.current.value
         }
-
-        try {
-            const {data} = await axios.post(endpoint, datos)
-            localStorage.setItem('AUTH TOKEN', data.token)
-        } catch (error) {
-            console.log((error as any).response.data.errors)
-        }
+        login(datos)
     }
 
     return(
@@ -57,9 +41,9 @@ function Login(){
                         <h2>¡Bienvenido!</h2>
                         <div className="Inputs">
                             <p>Correo Electronico:</p>
-                            <input value={Correo} onChange={(e)=>setCorreo(e.target.value)} type="email" name="" id="Text" ref={emailRef} required autoComplete="username" />
+                            <input value={Correo} onChange={(e)=>setCorreo(e.target.value)} type="email" name="Email" className="Text" ref={emailRef} required autoComplete="username" />
                             <p>Contraseña:</p>
-                            <input value={Contraseña} onChange={(e)=>setContraseña(e.target.value)} type="password" name="" id="Text" ref={passwordRef} required autoComplete="current-password"/>
+                            <input value={Contraseña} onChange={(e)=>setContraseña(e.target.value)} type="password" name="Password" className="Text" ref={passwordRef} required autoComplete="current-password"/>
                         </div>
                         <input type="submit" value="Iniciar sesión" id="Button" />
                         <p>¿No tienes cuenta? <Link to={"/Register"}><span>Registrate</span></Link></p>

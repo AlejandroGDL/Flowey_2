@@ -1,12 +1,8 @@
 import "../Rutas/Crud_Plantas.css"
 
 import Form_Modal from "../components/AddPlantaModal"
-
-import axios from "axios";
-
 import {useEffect,useState} from "react";
 import { Link } from "react-router-dom";
-
 import { Button } from "@mui/material"
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -18,10 +14,7 @@ import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-
-const endpoint = 'http://localhost:8000/api'
-
+import clienteAxios from "../config/axios";
 
 function Plant_M(){
     const [Plantas, setPlantas] = useState<any[]>([])
@@ -33,13 +26,13 @@ function Plant_M(){
 
     //Metodo Buscar Usuario
     const getAllPlantas = async () => {
-        const response = await axios.get(`${endpoint}/Plantas`)
+        const response = await clienteAxios.get('/api/Plantas')
         setPlantas(response.data as any)
     }
     
     //Metodo Eliminar Usuario
     const DeletePlantas = async(id:any) =>{
-        await axios.delete(`${endpoint}/Plantas/${id}`)
+        await clienteAxios.delete('/api/Plantas/${id}')
         getAllPlantas()
     }
 
