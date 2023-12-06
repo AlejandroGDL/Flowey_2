@@ -1,0 +1,205 @@
+
+.Contenedor_R{
+  grid-template: 
+  "Header_R" 60px,
+  "Cuerpo_R" auto;
+
+  padding: 30px;
+  height: 100%;
+}
+
+/* Atributos Formulario */
+.Form_Register{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+
+  border-radius: 10px;
+  
+  gap: 50px;
+  margin: 10px;
+  height: 100%;
+}
+
+/* Atributos Contenedor Formulario  */
+.Container_Form{
+  display: flex;
+  flex-direction: row;
+
+  margin: 2% 0px;
+}
+
+/* Atrubutos Contenedor TEXBOXES */
+.Inputs_R{
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+}
+
+.Inputs_R div{
+  margin: 5px 0px;
+  width: 100%;
+}
+
+/* Atributos Textboxes */
+#Text_R{
+  width: 100%;
+  height: 30px;
+}
+
+/* Atributos Contenedor EXTRA */
+.Datos_R{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 50%;
+}
+
+/* Atributos Contenedor EXTRA Parrafó */
+.Datos_R p{
+  width: auto;
+}
+
+/* Atributos Contenedor Titulo Registro */
+.Titulo_R{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+/* Atributos Titulo Registro */
+.Titulo_R h1{
+  font-weight: 500;
+  font-size: 48px;
+}
+
+/* Atributos Imagen Logo */
+.Datos_R img{
+  width: 100px;
+  height: 60px;
+}
+
+/* Contenedor Divisor */
+.Container_Divider_R{
+  display: flex;
+  justify-content: center;
+}
+
+/* Divisor */
+.Divider_R{
+  background-color: var(--LightGray);
+  width: 100%;
+  height: 2px;
+}
+
+/* Pie pagína Registro */
+.Footer_R{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Parrafo Pie de pagina */
+.Footer_R p{
+  width: auto;
+}
+
+/* Subrayar Terminos y condiciones */
+.Footer_R p span{
+  text-decoration: underline;
+}
+
+.Cuerpo_R{
+  height: 85%;
+}
+
+
+/*===== Modo Tablet =====*/
+@media (min-width:768px) and (max-width:1023px){
+  /* Atributos Contenedor Formulario  */
+  .Container_Form{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2% 0px;
+  }
+
+  /* Atributos Textboxes */
+  .Text_R{
+    width: 100%;
+    height: 30px;
+  }
+
+  /* Atrubutos Contenedor TEXBOXES */
+  .Inputs_R{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .Inputs_R div{
+    margin: 5px 0px;
+    width: 100%;
+  }
+
+  /* Atributos Contenedor EXTRA */
+  .Datos_R{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
+/*===== Modo Movil =====*/
+@media (max-width:767px){
+  /* Atributos Contenedor Formulario  */
+  .Container_Form{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2% 0px;
+  }
+
+  /* Atributos Textboxes */
+  .Text_R{
+    width: 100%;
+    height: 30px;
+  }
+
+  /* Atrubutos Contenedor TEXBOXES */
+  .Inputs_R{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .Inputs_R div{
+    margin: 5px 0px;
+    width: 100%;
+  }
+
+  /* Atributos Contenedor EXTRA */
+  .Datos_R{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
+
+
